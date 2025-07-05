@@ -16,7 +16,7 @@ The frontend of **GigPilot** is a React-based SPA built using **Vite**, **Tailwi
 ---
 
 ## 📁 Folder Structure
-
+```
 frontend/
 │
 ├── src/
@@ -25,7 +25,7 @@ frontend/
 │ ├── context/ # AuthContext
 │ ├── services/ # Axios wrapper
 │ └── App.jsx # Routing and layout
-
+```
 ## ✅ Core Principles
 
 - **Role-Based UI**: Employers and freelancers see different dashboards, actions, and permissions.

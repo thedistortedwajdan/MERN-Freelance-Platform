@@ -16,6 +16,7 @@ The backend is a **Node.js + Express** REST API with **MongoDB Atlas** and **Mon
 
 ## 📁 Folder Structure
 
+```
 backend/
 │
 ├── routes/ # Express route handlers (auth, task, user, rating)
@@ -23,6 +24,7 @@ backend/
 ├── middleware/ # Auth check, role guard (optional)
 ├── server.js # Entry point
 └── .env # Secrets (Mongo URI, JWT secret)
+```
 
 ## ✅ Core Features
 

@@ -18,22 +18,24 @@
 
 ## 🛠 Tech Stack
 
-| Layer       | Technology                         |
-|-------------|------------------------------------|
-| Frontend    | React (Vite), TailwindCSS          |
-| Backend     | Node.js, Express.js, Mongoose      |
-| Database    | MongoDB Atlas                      |
-| Auth        | JWT-based authentication           |
+| Layer    | Technology                    |
+| -------- | ----------------------------- |
+| Frontend | React (Vite), TailwindCSS     |
+| Backend  | Node.js, Express.js, Mongoose |
+| Database | MongoDB Atlas                 |
+| Auth     | JWT-based authentication      |
 
 ---
 
 ## 🔧 Project Structure
 
+```
 gigpilot/
 │
 ├── frontend/ # React-based UI (Vite + Tailwind)
 ├── backend/ # Express API, Mongoose models
 └── README.md # This file
+```
 
 ## 🧪 Running Locally
 
@@ -53,3 +55,4 @@ JWT_SECRET=your-secret
 # 4. Run both servers
 cd backend && npm run dev     # Start API
 cd frontend && npm run dev    # Start Vite frontend
+```
