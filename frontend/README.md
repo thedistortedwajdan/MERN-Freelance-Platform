@@ -1,12 +1,63 @@
-# React + Vite
+# 🎨 Frontend – GigPilot
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+The frontend of **GigPilot** is a React-based SPA built using **Vite**, **TailwindCSS**, and **React Router**. It offers a responsive and minimal UI designed for ease of use and role-based navigation.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🛠 Tools & Tech
 
-## Expanding the ESLint configuration
+- React (with Vite)
+- React Router DOM (v6+)
+- TailwindCSS
+- Axios
+- JWT handling via localStorage
+- Context API for auth
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 📁 Folder Structure
+
+frontend/
+│
+├── src/
+│ ├── components/ # Shared UI components (Navbar, RouteWrappers)
+│ ├── pages/ # Screens (Login, Dashboard, PostTask, etc.)
+│ ├── context/ # AuthContext
+│ ├── services/ # Axios wrapper
+│ └── App.jsx # Routing and layout
+
+## ✅ Core Principles
+
+- **Role-Based UI**: Employers and freelancers see different dashboards, actions, and permissions.
+- **Route Protection**: Auth + Role guards prevent unauthorized access using wrappers like:
+  - `<PrivateRoute>`
+  - `<RoleRoute>`
+  - `<GuestOnlyRoute>`
+- **State Management**: Auth state handled via React Context and localStorage.
+- **Minimal UX**: Clean, mobile-first design using Tailwind.
+
+---
+
+## 🔄 Key User Flows
+
+| Role        | Actions                                                  |
+|-------------|----------------------------------------------------------|
+| Employer    | Register → Post Task → View Applicants → Rate Freelancer|
+| Freelancer  | Register → Browse Tasks → Accept → Complete → Get Rated |
+
+---
+
+## 📸 UI Highlights
+
+- ✅ Diagonal gig-themed background on home page
+- 🗂️ Task feed with filters (by price, category)
+- 🧑‍💼 My Profile with stats and editable details
+- ⭐ Public profile with ratings and task history
+
+---
+
+## 🚀 Dev Commands
+
+```bash
+npm install
+npm run dev
