@@ -41,7 +41,7 @@ gigpilot/
 
 ```bash
 # 1. Clone repo
-git clone https://github.com/yourusername/gigpilot
+git clone https://github.com/thedistortedwajdan/gigpilot-freelance-marketplace-React-SpringBoot
 
 # 2. Install dependencies
 # backend deps are resolved by Maven
