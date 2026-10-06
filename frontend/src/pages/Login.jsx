@@ -16,8 +16,8 @@ export default function Login() {
     e.preventDefault();
     try {
       const res = await API.post("/auth/login", form);
-      login(res.data.user, res.data.token);
-      navigate("/dashboard");
+      login(res.data.user, res.data.token, res.data.refreshToken);
+      navigate(res.data.user.role === "employer" ? "/my-tasks" : "/dashboard");
     } catch (err) {
       setError(err.response?.data?.error || "Login failed");
     }

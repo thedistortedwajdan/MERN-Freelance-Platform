@@ -1,6 +1,6 @@
 # 🚀 GigPilot
 
-**GigPilot** is a full-stack freelance task marketplace built with **React**, **Node.js**, **Express**, and **MongoDB**. It connects employers with local freelancers for short-term, quick-turnaround projects.
+**GigPilot** is a full-stack freelance task marketplace built with **React**, **Spring Boot**, and **MongoDB**. It connects employers with local freelancers for short-term, quick-turnaround projects.
 
 ---
 
@@ -21,7 +21,7 @@
 | Layer    | Technology                    |
 | -------- | ----------------------------- |
 | Frontend | React (Vite), TailwindCSS     |
-| Backend  | Node.js, Express.js, Mongoose |
+| Backend  | Java 17, Spring Boot, Spring Data MongoDB |
 | Database | MongoDB Atlas                 |
 | Auth     | JWT-based authentication      |
 
@@ -33,7 +33,7 @@
 gigpilot/
 │
 ├── frontend/ # React-based UI (Vite + Tailwind)
-├── backend/ # Express API, Mongoose models
+├── backend/ # Spring Boot API (Spring Data MongoDB, JWT)
 └── README.md # This file
 ```
 
@@ -44,15 +44,15 @@ gigpilot/
 git clone https://github.com/yourusername/gigpilot
 
 # 2. Install dependencies
-cd backend && npm install
-cd ../frontend && npm install
+# backend deps are resolved by Maven
+cd frontend && npm install
 
 # 3. Set environment variables
 # in backend/.env
 MONGO_URI=your-mongo-uri
-JWT_SECRET=your-secret
+JWT_SECRET=a-secret-of-at-least-32-characters
 
 # 4. Run both servers
-cd backend && npm run dev     # Start API
+cd backend && mvn spring-boot:run   # Start API
 cd frontend && npm run dev    # Start Vite frontend
 ```

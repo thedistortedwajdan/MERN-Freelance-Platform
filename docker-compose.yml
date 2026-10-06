@@ -1,0 +1,28 @@
+# Backend + MongoDB:  JWT_SECRET=<32+ chars> docker compose up --build
+services:
+  mongo:
+    image: mongo:7
+    restart: unless-stopped
+    volumes:
+      - mongo-data:/data/db
+
+  backend:
+    build: ./backend
+    restart: unless-stopped
+    depends_on:
+      - mongo
+    ports:
+      - "5000:5000"
+    environment:
+      MONGO_URI: mongodb://mongo:27017/gigpilot
+      JWT_SECRET: ${JWT_SECRET:?Set JWT_SECRET to a random string of at least 32 characters}
+      CORS_ALLOWED_ORIGINS: ${CORS_ALLOWED_ORIGINS:-http://localhost:5173}
+      ADMIN_EMAIL: ${ADMIN_EMAIL:-}
+      ADMIN_PASSWORD: ${ADMIN_PASSWORD:-}
+      LOG_AUTH_TOKENS: ${LOG_AUTH_TOKENS:-false}
+    volumes:
+      - uploads:/data/uploads
+
+volumes:
+  mongo-data:
+  uploads:
