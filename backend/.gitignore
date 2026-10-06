@@ -1,2 +1,6 @@
+target/
 .env
-node_modules
+.idea/
+*.iml
+.vscode/
+uploads/
